@@ -15,7 +15,7 @@ export default function About() {
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-accent font-semibold text-sm uppercase tracking-wide mb-3">
+            <p className="text-brand-600 font-semibold text-sm uppercase tracking-wide mb-3">
               {ABOUT.eyebrow}
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy tracking-tight leading-tight">
@@ -30,8 +30,8 @@ export default function About() {
             <ul className="mt-6 grid sm:grid-cols-2 gap-2.5">
               {EXPERIENCE_AREAS.map((area) => (
                 <li key={area} className="flex items-center gap-2.5 text-sm text-navy">
-                  <span className="w-5 h-5 rounded-md bg-accent-soft flex items-center justify-center shrink-0">
-                    <Check size={12} className="text-accent" strokeWidth={2.5} />
+                  <span className="w-5 h-5 rounded-md bg-brand-soft flex items-center justify-center shrink-0">
+                    <Check size={12} className="text-brand-600" strokeWidth={2.5} />
                   </span>
                   {area}
                 </li>
@@ -50,10 +50,10 @@ export default function About() {
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
                   whileHover={{ y: -3 }}
-                  className="p-5 rounded-2xl bg-white border border-border hover:shadow-[0_6px_24px_-10px_rgba(11,29,54,0.1)] hover:border-accent/15 transition-all duration-300"
+                  className="p-5 rounded-2xl bg-white border border-border hover:shadow-[0_6px_24px_-10px_rgba(11,29,54,0.1)] hover:border-brand-500/15 transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-accent-soft flex items-center justify-center mb-3">
-                    <Icon size={20} className="text-accent" strokeWidth={1.75} />
+                  <div className="w-10 h-10 rounded-lg bg-brand-soft flex items-center justify-center mb-3">
+                    <Icon size={20} className="text-brand-600" strokeWidth={1.75} />
                   </div>
                   <h3 className="font-semibold text-navy text-sm mb-1.5">{item.title}</h3>
                   <p className="text-xs text-slate-muted leading-relaxed">{item.description}</p>

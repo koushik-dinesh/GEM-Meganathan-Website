@@ -25,7 +25,7 @@ const contactItems = [
 function FounderProfileCard() {
   return (
     <div className="relative h-full">
-      <div className="absolute -inset-1 rounded-[28px] bg-gradient-to-br from-accent/10 via-transparent to-navy/5 blur-sm" />
+      <div className="absolute -inset-1 rounded-[28px] bg-gradient-to-br from-brand-500/10 via-transparent to-navy/5 blur-sm" />
       <div className="relative h-full bg-white/85 backdrop-blur-xl border border-white/90 rounded-[28px] p-5 sm:p-6 shadow-[0_8px_32px_-12px_rgba(11,29,54,0.12),0_2px_8px_-2px_rgba(11,29,54,0.06)] flex flex-col justify-center">
         <div className="flex items-center gap-4 sm:gap-5">
           <div className="w-24 h-28 sm:w-28 sm:h-32 rounded-2xl overflow-hidden ring-2 ring-white shadow-md shrink-0">
@@ -41,10 +41,10 @@ function FounderProfileCard() {
 
           <div className="min-w-0 flex-1">
             <h3 className="text-lg font-bold text-navy tracking-tight">{FOUNDER.name}</h3>
-            <p className="text-sm text-accent font-medium mt-0.5">{FOUNDER.role}</p>
+            <p className="text-sm text-brand-600 font-medium mt-0.5">{FOUNDER.role}</p>
             <p className="text-sm text-slate-muted mt-2 leading-relaxed">{FOUNDER.description}</p>
-            <div className="mt-4 inline-flex items-center gap-2 bg-accent-soft/80 rounded-xl px-3 py-2 border border-accent/10">
-              <CheckCircle2 size={14} className="text-accent shrink-0" />
+            <div className="mt-4 inline-flex items-center gap-2 bg-brand-soft/80 rounded-xl px-3 py-2 border border-brand-500/10">
+              <CheckCircle2 size={14} className="text-brand-600 shrink-0" />
               <span className="text-xs font-semibold text-navy">{FOUNDER.badge}</span>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-12"
         >
-          <p className="text-accent font-semibold text-sm uppercase tracking-wide mb-3">
+          <p className="text-brand-600 font-semibold text-sm uppercase tracking-wide mb-3">
             {CONTACT_SECTION.eyebrow}
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy tracking-tight">
@@ -96,8 +96,8 @@ export default function Contact() {
               <div className="space-y-5">
                 {contactItems.map((item) => (
                   <div key={item.label} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-accent-soft flex items-center justify-center shrink-0">
-                      <item.icon size={18} className="text-accent" />
+                    <div className="w-10 h-10 rounded-xl bg-brand-soft flex items-center justify-center shrink-0">
+                      <item.icon size={18} className="text-brand-600" />
                     </div>
                     <div>
                       <p className="text-xs font-medium text-slate-light uppercase tracking-wide mb-1">
@@ -106,7 +106,7 @@ export default function Contact() {
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="text-sm font-semibold text-navy hover:text-accent transition-colors"
+                          className="text-sm font-semibold text-navy hover:text-brand-600 transition-colors"
                         >
                           {item.value}
                         </a>

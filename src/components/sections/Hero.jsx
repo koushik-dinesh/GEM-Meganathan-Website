@@ -7,8 +7,8 @@ const floatTransition = { duration: 5, repeat: Infinity, ease: 'easeInOut' }
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[88vh] flex items-center pt-16 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-surface via-white to-accent-soft/20" />
+    <section id="home" className="relative min-h-[88vh] flex items-center pt-32 lg:pt-36 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-surface via-white to-brand-soft/30" />
       <div
         className="absolute inset-0 opacity-[0.3]"
         style={{
@@ -26,13 +26,13 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-lg"
           >
-            <p className="text-accent font-semibold text-sm tracking-wide uppercase mb-6">
+            <p className="text-brand-600 font-semibold text-sm tracking-wide uppercase mb-6">
               {HERO.eyebrow}
             </p>
 
             <h1 className="leading-[1.02]">
               <span className="flex flex-wrap items-baseline gap-x-2 sm:gap-x-3 text-[1.875rem] sm:text-[2.25rem] lg:text-[2.5rem] font-bold text-navy tracking-tight">
-                <span className="text-[3.25rem] sm:text-[4.5rem] lg:text-[5rem] xl:text-[5.5rem] font-extrabold tracking-tighter leading-none bg-gradient-to-br from-accent to-[#3B7BB5] bg-clip-text text-transparent shrink-0">
+                <span className="text-[3.25rem] sm:text-[4.5rem] lg:text-[5rem] xl:text-[5.5rem] font-extrabold tracking-tighter leading-none text-brand-gradient shrink-0">
                   GeM
                 </span>
                 <span>Registration &amp;</span>
@@ -68,9 +68,9 @@ export default function Hero() {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative w-full max-w-md">
-              <div className="absolute -top-8 -right-8 w-48 h-48 rounded-full bg-accent/10 blur-3xl" />
+              <div className="absolute -top-8 -right-8 w-48 h-48 rounded-full bg-brand-500/10 blur-3xl" />
               <div className="absolute -bottom-6 -left-6 w-40 h-40 rounded-full bg-navy/5 blur-2xl" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full bg-accent-soft/40 blur-2xl" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full bg-brand-soft/50 blur-2xl" />
 
               <motion.div
                 animate={{ y: [0, -10, 0] }}

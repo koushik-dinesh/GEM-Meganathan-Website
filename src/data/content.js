@@ -30,45 +30,69 @@ export const SERVICES_SECTION = {
   eyebrow: 'Our Services',
   heading: 'GeM Portal Consultant Services',
   description:
-    'From registration and product listing to bid participation and compliance management — every step handled with precision and care.',
+    'Comprehensive GeM consultancy — from registration and L1 certification to product listing, bid support, compliance, and marketplace operations.',
 }
 
 export const SERVICES = [
   {
     title: 'GeM Registration',
     description:
-      'Complete guidance for GeM registration and portal processes, supporting businesses at every stage with accurate documentation and structured submission for a smooth onboarding experience.',
+      'End-to-end GeM seller onboarding — documentation, verification, and portal activation handled with precision.',
     icon: 'UserCheck',
+  },
+  {
+    title: 'MSME Registration',
+    description:
+      'MSME/Udyam registration, documentation, and certificate generation for eligible businesses.',
+    icon: 'Building2',
+  },
+  {
+    title: 'Vendor Registration',
+    description:
+      'Vendor registration for government departments, PSUs, and organizations with accurate documentation.',
+    icon: 'Users',
   },
   {
     title: 'Product Listing',
     description:
-      'Product upload and catalogue support on the GeM portal, with compliant listings and well-managed profiles that help government buyers find your offerings.',
+      'Compliant product uploads and catalogue management so government buyers can find your offerings.',
     icon: 'Package',
+  },
+  {
+    title: 'GeM L1 Service',
+    description:
+      'Obtain GeM L1 status, strengthen bid competitiveness, and meet procurement compliance requirements.',
+    icon: 'Award',
   },
   {
     title: 'Tender & Bid Support',
     description:
-      'Hands-on support for bid participation and tender success — helping businesses navigate opportunities on the GeM platform with clear, practical guidance.',
+      'Practical guidance for bid participation and tender success on the GeM platform.',
     icon: 'Gavel',
   },
   {
     title: 'Documentation & Compliance',
     description:
-      'Accurate documentation, compliance management, and standards-compliant submissions that keep your GeM account in good standing.',
+      'Standards-compliant submissions and compliance management to keep your account in good standing.',
     icon: 'FileCheck',
   },
   {
     title: 'Order Processing',
     description:
-      'End-to-end support for managing GeM orders and marketplace activities, aligned with portal requirements and buyer expectations.',
+      'Manage GeM orders and marketplace activities aligned with portal requirements.',
     icon: 'Truck',
   },
   {
     title: 'Invoice Generation',
     description:
-      'Assistance with invoice generation and related documentation on the GeM portal, supporting timely and compliant billing processes.',
+      'Timely, compliant invoice generation and related documentation on the GeM portal.',
     icon: 'Receipt',
+  },
+  {
+    title: 'GeM L1 Product',
+    description:
+      'List and manage L1 products with proper documentation and pricing support.',
+    icon: 'PackageCheck',
   },
 ]
 
@@ -133,14 +157,15 @@ export const CONTACT_SECTION = {
 
 export const FOOTER = {
   description:
-    'End-to-end GeM consultancy — registration, product listing, bid participation, documentation, order processing, and invoice generation.',
+    'End-to-end GeM consultancy — registration, L1 certification, product listing, bid participation, documentation, order processing, and invoice generation.',
   copyright: 'GemConsultantMeganathan.com',
 }
 
 export const FOOTER_SERVICES = [
   'GeM Registration',
+  'GeM L1 Service',
   'Product Listing',
+  'MSME Registration',
   'Tender & Bid Support',
-  'Order Processing',
-  'Invoice Generation',
+  'Vendor Registration',
 ]

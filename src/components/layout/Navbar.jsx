@@ -25,13 +25,13 @@ export default function Navbar() {
     <>
       <header
         className={cn(
-          'fixed top-0 inset-x-0 z-50 transition-all duration-300',
+          'fixed top-0 inset-x-0 z-50 transition-all duration-300 overflow-visible pt-3 sm:pt-4',
           scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-border' : 'bg-transparent'
         )}
       >
         <div className="section-container flex items-center justify-between h-16 lg:h-[72px]">
-          <a href="#home" className="flex items-center shrink-0 mr-4 lg:mr-6">
-            <Logo className="h-10 sm:h-11" />
+          <a href="#home" className="flex items-center shrink-0 mr-4 lg:mr-6 -my-2">
+            <Logo className="h-24 sm:h-28 lg:h-32" />
           </a>
 
           <nav className="hidden md:flex items-center gap-1">
@@ -39,7 +39,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3.5 py-2 text-sm text-slate-muted hover:text-navy rounded-lg hover:bg-surface transition-colors"
+                className="px-3.5 py-2 text-sm text-slate-muted hover:text-brand-700 rounded-lg hover:bg-brand-soft/60 transition-colors"
               >
                 {link.label}
               </a>
