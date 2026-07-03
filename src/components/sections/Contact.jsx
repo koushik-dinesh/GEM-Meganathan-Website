@@ -7,18 +7,18 @@ const contactItems = [
   {
     icon: MapPin,
     label: 'Office Address',
-    value: CONTACT.address,
+    lines: [CONTACT.businessName, ...CONTACT.addressLines],
   },
   {
     icon: Phone,
     label: 'Phone Number',
-    value: CONTACT.phone,
-    href: `tel:${CONTACT.phone.replace(/\s/g, '')}`,
+    phones: CONTACT.phones,
   },
   {
     icon: Mail,
     label: 'Email',
     value: CONTACT.emails.join(' · '),
+    href: `mailto:${CONTACT.email}`,
   },
 ]
 
@@ -103,7 +103,27 @@ export default function Contact() {
                       <p className="text-xs font-medium text-slate-light uppercase tracking-wide mb-1">
                         {item.label}
                       </p>
-                      {item.href ? (
+                      {item.lines ? (
+                        <div className="text-sm font-semibold text-navy space-y-0.5">
+                          {item.lines.map((line) => (
+                            <p key={line}>{line}</p>
+                          ))}
+                        </div>
+                      ) : item.phones ? (
+                        <p className="text-sm font-semibold text-navy">
+                          {item.phones.map((phone, i) => (
+                            <span key={phone.tel}>
+                              {i > 0 && <span className="text-slate-muted font-normal"> / </span>}
+                              <a
+                                href={`tel:${phone.tel}`}
+                                className="hover:text-brand-600 transition-colors"
+                              >
+                                {phone.display}
+                              </a>
+                            </span>
+                          ))}
+                        </p>
+                      ) : item.href ? (
                         <a
                           href={item.href}
                           className="text-sm font-semibold text-navy hover:text-brand-600 transition-colors"
@@ -138,8 +158,8 @@ export default function Contact() {
           className="mt-10 rounded-2xl overflow-hidden border border-border h-52 sm:h-60 bg-surface relative"
         >
           <iframe
-            title="Office location — Nungambakkam, Chennai"
-            src="https://maps.google.com/maps?q=Nungambakkam,Chennai,600034&output=embed"
+            title={`Office location — ${CONTACT.businessName}, Choolaimadu, Chennai`}
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(CONTACT.mapQuery)}&z=16&output=embed`}
             className="absolute inset-0 w-full h-full border-0 grayscale-[25%]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

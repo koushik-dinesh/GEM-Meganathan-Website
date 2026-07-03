@@ -53,14 +53,30 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-2 text-sm text-white/55">
-              <li>{CONTACT.address}</li>
+              <li className="leading-relaxed">
+                <span className="block font-medium text-white/70">{CONTACT.businessName}</span>
+                {CONTACT.addressLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </li>
               <li>
-                <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="hover:text-brand-400 transition-colors">
-                  {CONTACT.phone}
-                </a>
+                {CONTACT.phones.map((phone, i) => (
+                  <span key={phone.tel}>
+                    {i > 0 && ' / '}
+                    <a href={`tel:${phone.tel}`} className="hover:text-brand-400 transition-colors">
+                      {phone.display}
+                    </a>
+                  </span>
+                ))}
               </li>
               {CONTACT.emails.map((email) => (
-                <li key={email}>{email}</li>
+                <li key={email}>
+                  <a href={`mailto:${email}`} className="hover:text-brand-400 transition-colors">
+                    {email}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>

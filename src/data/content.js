@@ -142,17 +142,30 @@ export const WHY_CHOOSE = [
 ]
 
 export const CONTACT = {
-  address: 'Nugambakkam, Chennai – 600034',
+  businessName: 'MTS TECHNOLOGIES',
+  addressLines: [
+    'No.35/15, Shop No. 7, Choolaimadu High Road',
+    'Choolaimadu, Near Amma Hospital',
+    'Chennai - 600094',
+  ],
+  address:
+    'No.35/15, Shop No. 7, Choolaimadu High Road, Choolaimadu, Near Amma Hospital, Chennai - 600094',
+  mapQuery:
+    'No.35/15, Shop No. 7, Choolaimadu High Road, Choolaimadu, Near Amma Hospital, Chennai 600094',
+  phones: [
+    { display: '+91 99415 08577', tel: '+919941508577' },
+    { display: '+91 75500 29305', tel: '+917550029305' },
+  ],
   phone: '+91 99415 08577',
   whatsapp: 'https://wa.me/919941508577',
-  emails: ['info@gemconsultantmeganathan.com', 'ceo@gemconsultantmeganathan.com'],
-  email: 'info@gemconsultantmeganathan.com',
+  emails: ['contact@gemwithmeganathan.com'],
+  email: 'contact@gemwithmeganathan.com',
 }
 
 export const CONTACT_SECTION = {
   eyebrow: 'Contact',
   heading: 'Get in Touch',
-  description: 'Reach us by phone or visit our office in Nugambakkam, Chennai.',
+  description: 'Reach us by phone or visit our office in Choolaimadu, Chennai.',
 }
 
 export const FOOTER = {
